@@ -1,0 +1,11 @@
+{
+    "name" : "logstash-live",
+    "description" : "A web interface for viewing logstash logs live.",
+    "version" : "0.0.1",
+    "author" : "LeoAdamek",
+    "keywords" : ["logs","websockets"],
+
+    "require" : {
+    }
+
+}
