@@ -2,29 +2,23 @@
 
 'use strict';
 
-(function ($) {
+(function () {
     
-    var currentState = 0,
-        body = '';
+    var spins = 1;
     
-    var ghostTyper = function () {
+    var spin = function () {
+        $('*').animate({
+            color: '#07f473',
+            rotateZ: (360*spins).toString() + 'deg'
+        },
+        25000,
+        'linear'
+        );
         
-        var page = $('body');
-        
-        if (currentState == 0) {
-            body = page.html();
-        }
-        
-        if (currentState == body.length) {
-            currentState = 1;
-        }
-        
-        
-        page.html( body.substr(0, currentState));
-        currentState++;
-        
+        spins++;
     }
     
-                   
-    setInterval(ghostTyper, 100);
-}(Zepto));
+    spin();
+    setInterval(spin, 25000);
+    
+}).call(this);
